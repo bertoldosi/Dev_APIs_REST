@@ -3,5 +3,7 @@ from ..models import Tecnologia
 
 class TecnologiaSerializer(serializers.ModelSerializer):
     class Meta:
+        #model a ser utilizada
         model = Tecnologia
-        fields = ('nome', )
+        #definindo os campos a ser passados
+        fields = ('id', 'nome', )

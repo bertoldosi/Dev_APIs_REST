@@ -16,5 +16,6 @@ Including another URLconf
 from django.urls import path
 from .views import tecnologia_view
 urlpatterns = [
-    path('', tecnologia_view.TecnologiaList.as_view(), name='tecnologia-list'),
+    path('tecnologias', tecnologia_view.TecnologiaList.as_view(), name='tecnologia-list'),
+    path('tecnologias/<int:id>', tecnologia_view.TecnologiaDetalhes.as_view(), name='tecnologia-detalhes'),
 ]
